@@ -9,11 +9,12 @@ on:
   workflow_dispatch:
 
 env:
-  REACT_APP_MOVIE_API_URL: http://localhost:5000
+  REACT_APP_MOVIE_API_URL: http://a8051c80bd827478ab5bfd7c601ba985-642091123.us-east-1.elb.amazonaws.com
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: starter/frontend
@@ -35,6 +36,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: starter/frontend
